@@ -1,5 +1,6 @@
-package by.oris.game.webmafia.model;
+package by.oris.game.webmafia.model.entities.ingame;
 
+import by.oris.game.webmafia.model.entities.outgame.User;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -22,6 +23,8 @@ public class Player {
     @ManyToOne
     @JoinColumn(name = "player_role")
     private GameRole gameRole;
+    @Column(name="card_url")
+    private String cardUrl;
     @ManyToMany
     private Set<Move> moves;
     @Column(name = "is_alive")

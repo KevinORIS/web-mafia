@@ -1,5 +1,6 @@
-package by.oris.game.webmafia.model;
+package by.oris.game.webmafia.model.entities.outgame;
 
+import by.oris.game.webmafia.model.entities.ingame.Player;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -19,14 +20,14 @@ public class User {
     private String password;
     @Column(name = "profile_picture_url")
     private String profilePictureURL;
-    @OneToOne(mappedBy = "users")
+    @OneToOne
     private Stat stat;
     @ManyToOne
     @JoinColumn(name = "user_role")
     private UserRole userRole;
-    @OneToOne(mappedBy = "users")
+    @OneToOne
     private Player player;
-    @ManyToMany
+    @OneToMany
     private Set<Friendship> friendships;
     private Timestamp createdTs;
     private Timestamp updatedTs;

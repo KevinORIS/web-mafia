@@ -1,4 +1,4 @@
-package by.oris.game.webmafia.model;
+package by.oris.game.webmafia.model.entities.ingame;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -15,10 +15,14 @@ public class Stage {
     @Column(name = "stage_id",unique = true, nullable = false)
     private int id;
     private String name;
+    private String time;
     @ManyToOne
     private Game game;
     @OneToMany
     private Set<Move> moves;
+    @OneToOne
+    @JoinColumn(name="vote_result")
+    private Player player;
     @Column(name = "stage_start")
     private Timestamp stageStart;
     @Column(name = "stage_end")

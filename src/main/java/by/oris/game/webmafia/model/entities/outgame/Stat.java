@@ -1,4 +1,4 @@
-package by.oris.game.webmafia.model;
+package by.oris.game.webmafia.model.entities.outgame;
 
 import jakarta.persistence.*;
 import lombok.Data;

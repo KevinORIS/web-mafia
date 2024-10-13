@@ -1,4 +1,4 @@
-package by.oris.game.webmafia.model;
+package by.oris.game.webmafia.model.entities.ingame;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -15,6 +15,7 @@ public class Game {
     @Column(name = "game_id",unique = true, nullable = false)
     private int id;
     private String status;
+    private String result;
     @OneToMany
     private Set<Player> players;
     @OneToMany
