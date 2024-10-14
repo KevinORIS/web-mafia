@@ -2,6 +2,7 @@ package by.oris.game.webmafia.model.entities.ingame;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
 import java.util.Set;
@@ -21,9 +22,9 @@ public class Stage {
     @OneToMany
     private Set<Move> moves;
     @OneToOne
-    @JoinColumn(name="vote_result")
-    private Player player;
+    private VoteResult voteResult;
     @Column(name = "stage_start")
+    @CreationTimestamp
     private Timestamp stageStart;
     @Column(name = "stage_end")
     private Timestamp stageEnd;

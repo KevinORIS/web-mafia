@@ -25,8 +25,10 @@ public class Player {
     private GameRole gameRole;
     @Column(name="card_url")
     private String cardUrl;
-    @ManyToMany
+    @OneToMany
     private Set<Move> moves;
+    @OneToOne
+    private VoteResult voteResult;
     @Column(name = "is_alive")
     private boolean isAlive;
     @Column(name = "is_online")

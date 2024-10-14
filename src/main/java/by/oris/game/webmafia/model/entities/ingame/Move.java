@@ -2,6 +2,8 @@ package by.oris.game.webmafia.model.entities.ingame;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.CurrentTimestamp;
 
 import java.sql.Timestamp;
 import java.util.Set;
@@ -17,9 +19,12 @@ public class Move {
     private String name;
     @ManyToOne
     private Stage stage;
-    @ManyToMany
-    private Set<Player> players1;
-    @ManyToMany
-    private Set<Player> players2;
+    @ManyToOne
+    @JoinColumn(name = "player_id")
+    private Player player1;
+    @ManyToOne
+    @JoinColumn(name = "target_player_id")
+    private Player player2;
+    @CreationTimestamp
     private Timestamp timestamp;
 }

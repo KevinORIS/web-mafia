@@ -2,6 +2,7 @@ package by.oris.game.webmafia.model.entities.outgame;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
 
@@ -21,5 +22,6 @@ public class Friendship {
     private User users2;
     private String status;
     @Column(name = "created_ts")
+    @CreationTimestamp
     private Timestamp createdTs;
 }
