@@ -1,4 +1,4 @@
-package by.oris.game.webmafia.model.entities.ingame.service.outgame;
+package by.oris.game.webmafia.service.outgame;
 
 import by.oris.game.webmafia.dao.impl.outgame.UserRoleDAOImpl;
 import by.oris.game.webmafia.model.entities.outgame.UserRole;

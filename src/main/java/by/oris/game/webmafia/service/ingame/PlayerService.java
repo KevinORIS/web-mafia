@@ -1,4 +1,4 @@
-package by.oris.game.webmafia.model.entities.ingame.service.ingame;
+package by.oris.game.webmafia.service.ingame;
 
 import by.oris.game.webmafia.dao.impl.ingame.PlayerDAOImpl;
 import by.oris.game.webmafia.model.entities.ingame.Player;

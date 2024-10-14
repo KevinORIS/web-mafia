@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RoleController {
     @Autowired
-    private AddingUserRolesToDB addingFakeGameToDB;
+    private AddingUserRolesToDB addingUserRolesToDB;
 
     @GetMapping("/addroles")
     public String addRoles() {
-        addingFakeGameToDB.addRoles();
+        addingUserRolesToDB.addRoles();
         return "Roles added successfully";
     }
 }

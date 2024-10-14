@@ -1,7 +1,7 @@
 package by.oris.game.webmafia.test;
 
 import by.oris.game.webmafia.model.entities.outgame.UserRole;
-import by.oris.game.webmafia.model.entities.ingame.service.outgame.UserRoleService;
+import by.oris.game.webmafia.service.outgame.UserRoleService;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 
