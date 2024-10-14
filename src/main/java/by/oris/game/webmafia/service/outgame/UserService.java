@@ -13,4 +13,12 @@ public class UserService {
     public User create(User user){
         return userDAO.create(user);
     }
+
+    public User update(User user){
+        return userDAO.update(user);
+    }
+
+    public User findById(int id){
+        return userDAO.findOne(id);
+    }
 }

@@ -13,4 +13,8 @@ public class FriendshipService {
     public Friendship create(Friendship friendship) {
         return friendshipDAO.create(friendship);
     }
+
+    public Friendship update(Friendship friendship){
+        return friendshipDAO.update(friendship);
+    }
 }

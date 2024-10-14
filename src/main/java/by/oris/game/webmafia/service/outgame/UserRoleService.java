@@ -10,9 +10,9 @@ public class UserRoleService {
     @Autowired
     private UserRoleDAOImpl userRoleDAO;
 
-//    public UserRole findOne(final int id) {
-//        return userRoleDAO.findOne(id);
-//    }
+    public UserRole findById(final int id) {
+        return userRoleDAO.findOne(id);
+    }
 //
 //    public List<UserRole> findAll() {
 //        return userRoleDAO.findAll();
@@ -23,9 +23,9 @@ public class UserRoleService {
        return userRoleDAO.create(userRole);
     }
 
-//    public UserRole update(final UserRole userRole) {
-//        return userRoleDAO.update(userRole);
-//    }
+    public UserRole update(final UserRole userRole) {
+        return userRoleDAO.update(userRole);
+    }
 //
 //    public void delete(final UserRole userRole) {
 //        userRoleDAO.delete(userRole);

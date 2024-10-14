@@ -10,7 +10,11 @@ public class VoteResultService {
     @Autowired
     private VoteResultDAOImpl voteResultDAO;
 
-    public VoteResult create(VoteResult voteResult){
+    public VoteResult create(VoteResult voteResult) {
         return voteResultDAO.create(voteResult);
+    }
+
+    public VoteResult update(VoteResult voteResult) {
+        return voteResultDAO.update(voteResult);
     }
 }
