@@ -66,42 +66,42 @@ public class AddAllEntitiesToDB {
         user1.setEmail("bob@gmail.com");
         user1.setPassword("asdvxcvhn23");
         user1.setProfilePictureURL("/bobik");
- //       user1.setUserRole(userRoleService.findById(1));
+        user1.setUserRole(userRole);
 
         User user2 = new User();
         user2.setName("Jack");
         user2.setEmail("jack@gmail.com");
         user2.setPassword("123");
         user2.setProfilePictureURL("/jack");
- //       user2.setUserRole(userRole);
+        user2.setUserRole(userRole);
 
         User user3 = new User();
         user3.setName("Kevin");
         user3.setEmail("kevin@gmail.com");
         user3.setPassword("441");
         user3.setProfilePictureURL("/kevin");
- //       user3.setUserRole(userRole);
+        user3.setUserRole(userRole);
 
         User user4 = new User();
         user4.setName("Lupik");
         user4.setEmail("lupik@gmail.com");
         user4.setPassword("gcv123");
         user4.setProfilePictureURL("/lupik");
- //       user4.setUserRole(userRole);
+        user4.setUserRole(userRole);
 
         User user5 = new User();
         user5.setName("John");
         user5.setEmail("john@gmail.com");
         user5.setPassword("vvcsa");
         user5.setProfilePictureURL("/jjj");
-//        user5.setUserRole(userRole);
+        user5.setUserRole(userRole);
 
         User user6 = new User();
         user6.setName("LosPol");
         user6.setEmail("los@gmail.com");
         user6.setPassword("pol");
         user6.setProfilePictureURL("/pol");
-//        user6.setUserRole(userRole);
+        user6.setUserRole(userRole);
 
         Set<User> users = new HashSet<>();
 
@@ -113,50 +113,48 @@ public class AddAllEntitiesToDB {
         users.add(user6);
 
         userRole.setUsers(users);
-//
-//        userRoleService.update(userRole);
 
         Stat stat1 = new Stat();
         stat1.setGamesPlayed(12);
         stat1.setCivilWins(5);
         stat1.setMafiaWins(7);
         stat1.setUser(user1);
-//        user1.setStat(stat1);
+        user1.setStat(stat1);
 
         Stat stat2 = new Stat();
         stat2.setGamesPlayed(77);
         stat2.setCivilWins(3);
         stat2.setMafiaWins(35);
         stat2.setUser(user2);
-//        user2.setStat(stat2);
+        user2.setStat(stat2);
 
         Stat stat3 = new Stat();
         stat3.setGamesPlayed(86);
         stat3.setCivilWins(34);
         stat3.setMafiaWins(4);
         stat3.setUser(user3);
-//        user3.setStat(stat3);
+        user3.setStat(stat3);
 
         Stat stat4 = new Stat();
         stat4.setGamesPlayed(123);
         stat4.setCivilWins(54);
         stat4.setMafiaWins(7);
         stat4.setUser(user4);
-//        user4.setStat(stat4);
+        user4.setStat(stat4);
 
         Stat stat5 = new Stat();
         stat5.setGamesPlayed(43);
         stat5.setCivilWins(15);
         stat5.setMafiaWins(7);
         stat5.setUser(user5);
-//        user5.setStat(stat5);
+        user5.setStat(stat5);
 
         Stat stat6 = new Stat();
         stat6.setGamesPlayed(23);
         stat6.setCivilWins(5);
         stat6.setMafiaWins(1);
         stat6.setUser(user6);
-//        user6.setStat(stat6);
+        user6.setStat(stat6);
 
         Friendship friendship = new Friendship();
         FriendshipPK friendshipPK = new FriendshipPK();
@@ -168,9 +166,9 @@ public class AddAllEntitiesToDB {
         friendship.setStatus("approved");
         Set<Friendship> friendshipSet = new HashSet<>();
 
-//        friendshipSet.add(friendship);
-//        user3.setFriendships(friendshipSet);
-//        user1.setFriendships(friendshipSet);
+        friendshipSet.add(friendship);
+        user3.setFriendships(friendshipSet);
+        user1.setFriendships(friendshipSet);
 
         Game game = new Game();
         game.setStatus("ended");
@@ -184,7 +182,7 @@ public class AddAllEntitiesToDB {
         Player player1 = new Player();
         player1.setGame(game);
         player1.setUser(user1);
-//        user1.setPlayer(player1);
+        user1.setPlayer(player1);
         player1.setGameRole(gameRole1);
         player1.setCardUrl("/civil");
         player1.setAlive(false);
@@ -193,7 +191,7 @@ public class AddAllEntitiesToDB {
         Player player2 = new Player();
         player2.setGame(game);
         player2.setUser(user2);
-//        user2.setPlayer(player2);
+        user2.setPlayer(player2);
         player2.setGameRole(gameRole1);
         player2.setCardUrl("/civil");
         player2.setAlive(false);
@@ -202,7 +200,7 @@ public class AddAllEntitiesToDB {
         Player player3 = new Player();
         player3.setGame(game);
         player3.setUser(user3);
-//        user3.setPlayer(player3);
+        user3.setPlayer(player3);
         player3.setGameRole(gameRole2);
         player3.setCardUrl("/mafia");
         player3.setAlive(false);
@@ -211,7 +209,7 @@ public class AddAllEntitiesToDB {
         Player player4 = new Player();
         player4.setGame(game);
         player4.setUser(user4);
-//        user4.setPlayer(player4);
+        user4.setPlayer(player4);
         player4.setGameRole(gameRole1);
         player4.setCardUrl("/civil");
         player4.setAlive(false);
@@ -220,7 +218,7 @@ public class AddAllEntitiesToDB {
         Player player5 = new Player();
         player5.setGame(game);
         player5.setUser(user5);
-//        user5.setPlayer(player5);
+        user5.setPlayer(player5);
         player5.setGameRole(gameRole2);
         player5.setCardUrl("/mafia");
         player5.setAlive(false);
@@ -229,25 +227,25 @@ public class AddAllEntitiesToDB {
         Player player6 = new Player();
         player6.setGame(game);
         player6.setUser(user6);
-//        user6.setPlayer(player6);
+        user6.setPlayer(player6);
         player6.setGameRole(gameRole1);
         player6.setCardUrl("/civil");
         player6.setAlive(false);
         player6.setOnline(false);
 
-//        Set<Player> civilPlayers = new HashSet<>();
-//        civilPlayers.add(player1);
-//        civilPlayers.add(player2);
-//        civilPlayers.add(player4);
-//        civilPlayers.add(player6);
-//
-//        gameRole1.setPlayers(civilPlayers);
-//
-//        Set<Player> mafiaPlayers = new HashSet<>();
-//        civilPlayers.add(player3);
-//        civilPlayers.add(player5);
-//
-//        gameRole2.setPlayers(mafiaPlayers);
+        Set<Player> civilPlayers = new HashSet<>();
+        civilPlayers.add(player1);
+        civilPlayers.add(player2);
+        civilPlayers.add(player4);
+        civilPlayers.add(player6);
+
+        gameRole1.setPlayers(civilPlayers);
+
+        Set<Player> mafiaPlayers = new HashSet<>();
+        civilPlayers.add(player3);
+        civilPlayers.add(player5);
+
+        gameRole2.setPlayers(mafiaPlayers);
 
         Stage stage1 = new Stage();
         stage1.setGame(game);
@@ -296,8 +294,8 @@ public class AddAllEntitiesToDB {
         voteResult1.setId(voteResultPK1);
         voteResult1.setStage(stage2);
         voteResult1.setPlayer(player2);
-//        stage2.setVoteResult(voteResult1);
-//        player2.setVoteResult(voteResult1);
+        stage2.setVoteResult(voteResult1);
+        player2.setVoteResult(voteResult1);
 
         VoteResult voteResult2 = new VoteResult();
         VoteResultPK voteResultPK2 = new VoteResultPK();
@@ -306,8 +304,8 @@ public class AddAllEntitiesToDB {
         voteResult2.setId(voteResultPK2);
         voteResult2.setStage(stage4);
         voteResult2.setPlayer(player5);
-//        stage4.setVoteResult(voteResult2);
-//        player4.setVoteResult(voteResult2);
+        stage4.setVoteResult(voteResult2);
+        player4.setVoteResult(voteResult2);
 
         VoteResult voteResult3 = new VoteResult();
         VoteResultPK voteResultPK3 = new VoteResultPK();
@@ -316,8 +314,8 @@ public class AddAllEntitiesToDB {
         voteResult3.setId(voteResultPK3);
         voteResult3.setStage(stage6);
         voteResult3.setPlayer(player1);
-//        stage6.setVoteResult(voteResult3);
-//        player1.setVoteResult(voteResult3);
+        stage6.setVoteResult(voteResult3);
+        player1.setVoteResult(voteResult3);
 
         VoteResult voteResult4 = new VoteResult();
         VoteResultPK voteResultPK4 = new VoteResultPK();
@@ -326,163 +324,163 @@ public class AddAllEntitiesToDB {
         voteResult4.setId(voteResultPK4);
         voteResult4.setStage(stage8);
         voteResult4.setPlayer(player3);
-//        stage8.setVoteResult(voteResult4);
-//        player3.setVoteResult(voteResult4);
+        stage8.setVoteResult(voteResult4);
+        player3.setVoteResult(voteResult4);
 
-//        Set<Move> movePlayer1 = new HashSet<>();
-//        Set<Move> movePlayer2 = new HashSet<>();
-//        Set<Move> movePlayer3 = new HashSet<>();
-//        Set<Move> movePlayer4 = new HashSet<>();
-//        Set<Move> movePlayer5 = new HashSet<>();
-//        Set<Move> movePlayer6 = new HashSet<>();
-//
-//        Set<Move> moveStage2 = new HashSet<>();
-//        Set<Move> moveStage4 = new HashSet<>();
-//        Set<Move> moveStage6 = new HashSet<>();
-//        Set<Move> moveStage8 = new HashSet<>();
+        Set<Move> movePlayer1 = new HashSet<>();
+        Set<Move> movePlayer2 = new HashSet<>();
+        Set<Move> movePlayer3 = new HashSet<>();
+        Set<Move> movePlayer4 = new HashSet<>();
+        Set<Move> movePlayer5 = new HashSet<>();
+        Set<Move> movePlayer6 = new HashSet<>();
+
+        Set<Move> moveStage2 = new HashSet<>();
+        Set<Move> moveStage4 = new HashSet<>();
+        Set<Move> moveStage6 = new HashSet<>();
+        Set<Move> moveStage8 = new HashSet<>();
 
         Move move1 = new Move();
         move1.setName("kill_vote");
         move1.setStage(stage2);
         move1.setPlayer1(player3);
         move1.setPlayer2(player2);
-//        movePlayer3.add(move1);
-//        moveStage2.add(move1);
+        movePlayer3.add(move1);
+        moveStage2.add(move1);
 
         Move move2 = new Move();
         move2.setName("kill_vote");
         move2.setStage(stage2);
         move2.setPlayer1(player5);
         move2.setPlayer2(player4);
-//        movePlayer5.add(move2);
-//        moveStage2.add(move2);
+        movePlayer5.add(move2);
+        moveStage2.add(move2);
 
         Move move3 = new Move();
         move3.setName("vote");
         move3.setStage(stage4);
         move3.setPlayer1(player1);
         move3.setPlayer2(player5);
-//        movePlayer1.add(move3);
-//        moveStage4.add(move3);
+        movePlayer1.add(move3);
+        moveStage4.add(move3);
 
         Move move4 = new Move();
         move4.setName("vote");
         move4.setStage(stage4);
         move4.setPlayer1(player3);
         move4.setPlayer2(player1);
-//        movePlayer3.add(move4);
-//        moveStage4.add(move4);
+        movePlayer3.add(move4);
+        moveStage4.add(move4);
 
         Move move5 = new Move();
         move5.setName("vote");
         move5.setStage(stage4);
         move5.setPlayer1(player4);
         move5.setPlayer2(player5);
-//        movePlayer4.add(move5);
-//        moveStage4.add(move5);
+        movePlayer4.add(move5);
+        moveStage4.add(move5);
 
         Move move6 = new Move();
         move6.setName("vote");
         move6.setStage(stage4);
         move6.setPlayer1(player5);
         move6.setPlayer2(player1);
-//        movePlayer5.add(move6);
-//        moveStage4.add(move6);
+        movePlayer5.add(move6);
+        moveStage4.add(move6);
 
         Move move7 = new Move();
         move7.setName("vote");
         move7.setStage(stage4);
         move7.setPlayer1(player6);
         move7.setPlayer2(player5);
-//        movePlayer6.add(move7);
-//        moveStage4.add(move7);
+        movePlayer6.add(move7);
+        moveStage4.add(move7);
 
         Move move8 = new Move();
         move8.setName("kill_vote");
         move8.setStage(stage6);
         move8.setPlayer1(player3);
         move8.setPlayer2(player1);
-//        movePlayer3.add(move8);
-//        moveStage6.add(move8);
+        movePlayer3.add(move8);
+        moveStage6.add(move8);
 
         Move move9 = new Move();
         move9.setName("vote");
         move9.setStage(stage8);
         move9.setPlayer1(player3);
         move9.setPlayer2(player4);
-//        movePlayer3.add(move9);
-//        moveStage8.add(move9);
+        movePlayer3.add(move9);
+        moveStage8.add(move9);
 
         Move move10 = new Move();
         move10.setName("vote");
         move10.setStage(stage8);
         move10.setPlayer1(player4);
         move10.setPlayer2(player3);
-//        movePlayer4.add(move10);
-//        moveStage8.add(move10);
+        movePlayer4.add(move10);
+        moveStage8.add(move10);
 
         Move move11 = new Move();
         move11.setName("vote");
         move11.setStage(stage8);
         move11.setPlayer1(player6);
         move11.setPlayer2(player3);
-//        movePlayer6.add(move11);
-//        moveStage8.add(move11);
+        movePlayer6.add(move11);
+        moveStage8.add(move11);
 
-        userRoleService.create(userRole);
+        userRoleService.save(userRole);
 
-        userService.create(user1);
-        userService.create(user2);
-        userService.create(user3);
-        userService.create(user4);
-        userService.create(user5);
-        userService.create(user6);
+        userService.save(user1);
+        userService.save(user2);
+        userService.save(user3);
+        userService.save(user4);
+        userService.save(user5);
+        userService.save(user6);
 
-        statService.create(stat1);
-        statService.create(stat2);
-        statService.create(stat3);
-        statService.create(stat4);
-        statService.create(stat5);
-        statService.create(stat6);
+        statService.save(stat1);
+        statService.save(stat2);
+        statService.save(stat3);
+        statService.save(stat4);
+        statService.save(stat5);
+        statService.save(stat6);
 
-        gameRoleService.create(gameRole1);
-        gameRoleService.create(gameRole2);
+        gameRoleService.save(gameRole1);
+        gameRoleService.save(gameRole2);
 
-        gameService.create(game);
+        gameService.save(game);
 
-        playerService.create(player1);
-        playerService.create(player2);
-        playerService.create(player3);
-        playerService.create(player4);
-        playerService.create(player5);
-        playerService.create(player6);
+        playerService.save(player1);
+        playerService.save(player2);
+        playerService.save(player3);
+        playerService.save(player4);
+        playerService.save(player5);
+        playerService.save(player6);
 
-        stageService.create(stage1);
-        stageService.create(stage2);
-        stageService.create(stage3);
-        stageService.create(stage4);
-        stageService.create(stage5);
-        stageService.create(stage6);
-        stageService.create(stage7);
-        stageService.create(stage8);
+        stageService.save(stage1);
+        stageService.save(stage2);
+        stageService.save(stage3);
+        stageService.save(stage4);
+        stageService.save(stage5);
+        stageService.save(stage6);
+        stageService.save(stage7);
+        stageService.save(stage8);
 
-        moveService.create(move1);
-        moveService.create(move2);
-        moveService.create(move3);
-        moveService.create(move4);
-        moveService.create(move5);
-        moveService.create(move6);
-        moveService.create(move7);
-        moveService.create(move8);
-        moveService.create(move9);
-        moveService.create(move10);
-        moveService.create(move11);
+        moveService.save(move1);
+        moveService.save(move2);
+        moveService.save(move3);
+        moveService.save(move4);
+        moveService.save(move5);
+        moveService.save(move6);
+        moveService.save(move7);
+        moveService.save(move8);
+        moveService.save(move9);
+        moveService.save(move10);
+        moveService.save(move11);
 
-        friendshipService.create(friendship);
+        friendshipService.save(friendship);
 
-        voteResultService.create(voteResult1);
-        voteResultService.create(voteResult2);
-        voteResultService.create(voteResult3);
-        voteResultService.create(voteResult4);
+        voteResultService.save(voteResult1);
+        voteResultService.save(voteResult2);
+        voteResultService.save(voteResult3);
+        voteResultService.save(voteResult4);
     }
 }

@@ -16,12 +16,12 @@ public class AddingUserRolesToDB {
     public void addRoles() {
         UserRole userRole1 = new UserRole();
         userRole1.setName("admin");
-        userRoleService.create(userRole1);
+        userRoleService.save(userRole1);
         UserRole userRole2 = new UserRole();
         userRole2.setName("moderator");
-        userRoleService.create(userRole2);
+        userRoleService.save(userRole2);
         UserRole userRole3 = new UserRole();
         userRole3.setName("user");
-        userRoleService.create(userRole3);
+        userRoleService.save(userRole3);
     }
 }

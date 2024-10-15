@@ -2,19 +2,17 @@ package by.oris.game.webmafia.service.outgame;
 
 import by.oris.game.webmafia.dao.impl.outgame.FriendshipDAOImpl;
 import by.oris.game.webmafia.model.entities.outgame.Friendship;
+import by.oris.game.webmafia.repository.outgame.FriendshipRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class FriendshipService {
     @Autowired
-    private FriendshipDAOImpl friendshipDAO;
+    FriendshipRepository friendshipRepository;
 
-    public Friendship create(Friendship friendship) {
-        return friendshipDAO.create(friendship);
+    public Friendship save(Friendship friendship) {
+        return friendshipRepository.save(friendship);
     }
 
-    public Friendship update(Friendship friendship){
-        return friendshipDAO.update(friendship);
-    }
 }

@@ -1,37 +1,23 @@
 package by.oris.game.webmafia.service.outgame;
 
-import by.oris.game.webmafia.dao.impl.outgame.UserRoleDAOImpl;
 import by.oris.game.webmafia.model.entities.outgame.UserRole;
+import by.oris.game.webmafia.repository.outgame.UserRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class UserRoleService {
     @Autowired
-    private UserRoleDAOImpl userRoleDAO;
+    private UserRoleRepository userRoleRepository;
 
-    public UserRole findById(final int id) {
-        return userRoleDAO.findOne(id);
-    }
-//
-//    public List<UserRole> findAll() {
-//        return userRoleDAO.findAll();
-//    }
-
-
-    public UserRole create(UserRole userRole) {
-       return userRoleDAO.create(userRole);
+    public Optional<UserRole> findById(final int id) {
+        return userRoleRepository.findById(id);
     }
 
-    public UserRole update(final UserRole userRole) {
-        return userRoleDAO.update(userRole);
+
+    public UserRole save(UserRole userRole) {
+       return userRoleRepository.save(userRole);
     }
-//
-//    public void delete(final UserRole userRole) {
-//        userRoleDAO.delete(userRole);
-//    }
-//
-//    public void deleteById(final int userRoleId) {
-//        userRoleDAO.deleteById(userRoleId);
-//    }
 }
