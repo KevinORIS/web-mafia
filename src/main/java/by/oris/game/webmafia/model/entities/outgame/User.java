@@ -2,13 +2,17 @@ package by.oris.game.webmafia.model.entities.outgame;
 
 import by.oris.game.webmafia.model.entities.ingame.Player;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
 import java.util.Set;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "users")
 public class User {
@@ -34,4 +38,11 @@ public class User {
     @CreationTimestamp
     private Timestamp createdTs;
     private Timestamp updatedTs;
+
+    public User(String email, String name, String password) {
+        super();
+        this.email = email;
+        this.name = name;
+        this.password = password;
+    }
 }

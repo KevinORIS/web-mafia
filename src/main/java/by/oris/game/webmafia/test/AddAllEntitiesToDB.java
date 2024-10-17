@@ -2,11 +2,11 @@ package by.oris.game.webmafia.test;
 
 import by.oris.game.webmafia.model.entities.ingame.*;
 import by.oris.game.webmafia.model.entities.outgame.*;
-import by.oris.game.webmafia.service.ingame.*;
-import by.oris.game.webmafia.service.outgame.FriendshipService;
-import by.oris.game.webmafia.service.outgame.StatService;
-import by.oris.game.webmafia.service.outgame.UserRoleService;
-import by.oris.game.webmafia.service.outgame.UserService;
+import by.oris.game.webmafia.service.impl.ingame.*;
+import by.oris.game.webmafia.service.impl.outgame.FriendshipServiceImpl;
+import by.oris.game.webmafia.service.impl.outgame.StatServiceImpl;
+import by.oris.game.webmafia.service.impl.outgame.UserRoleServiceImpl;
+import by.oris.game.webmafia.service.impl.outgame.UserServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,20 +15,22 @@ import java.util.Set;
 
 @Controller
 public class AddAllEntitiesToDB {
-    private UserRoleService userRoleService;
-    private GameRoleService gameRoleService;
-    private GameService gameService;
-    private MoveService moveService;
-    private PlayerService playerService;
-    private StageService stageService;
-    private VoteResultService voteResultService;
-    private FriendshipService friendshipService;
-    private StatService statService;
-    private UserService userService;
+    private UserRoleServiceImpl userRoleService;
+    private GameRoleServiceImlp gameRoleService;
+    private GameServiceImpl gameService;
+    private MoveServiceImpl moveService;
+    private PlayerServiceImpl playerService;
+    private StageServiceImpl stageService;
+    private VoteResultServiceImpl voteResultService;
+    private FriendshipServiceImpl friendshipService;
+    private StatServiceImpl statService;
+    private UserServiceImpl userService;
 
-    public AddAllEntitiesToDB(UserRoleService userRoleService, GameRoleService gameRoleService, GameService gameService, MoveService moveService,
-                              PlayerService playerService, StageService stageService, VoteResultService voteResultService,
-                              FriendshipService friendshipService, StatService statService, UserService userService) {
+    public AddAllEntitiesToDB(UserRoleServiceImpl userRoleService, GameRoleServiceImlp gameRoleService,
+                              GameServiceImpl gameService, MoveServiceImpl moveService,
+                              PlayerServiceImpl playerService, StageServiceImpl stageService,
+                              VoteResultServiceImpl voteResultService, FriendshipServiceImpl friendshipService,
+                              StatServiceImpl statService, UserServiceImpl userService) {
         this.userRoleService = userRoleService;
         this.gameRoleService = gameRoleService;
         this.gameService = gameService;
