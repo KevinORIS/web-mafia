@@ -1,13 +1,12 @@
-package by.oris.game.webmafia.service.ingame;
+package by.oris.game.webmafia.service.impl.ingame;
 
-import by.oris.game.webmafia.dao.impl.ingame.StageDAOImpl;
 import by.oris.game.webmafia.model.entities.ingame.Stage;
 import by.oris.game.webmafia.repository.ingame.StageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class StageService {
+public class StageServiceImpl {
     @Autowired
     StageRepository stageRepository;
 

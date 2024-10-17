@@ -1,13 +1,12 @@
-package by.oris.game.webmafia.service.outgame;
+package by.oris.game.webmafia.service.impl.outgame;
 
-import by.oris.game.webmafia.dao.impl.outgame.StatDAOImpl;
 import by.oris.game.webmafia.model.entities.outgame.Stat;
 import by.oris.game.webmafia.repository.outgame.StatRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class StatService {
+public class StatServiceImpl {
     @Autowired
     StatRepository statRepository;
 
