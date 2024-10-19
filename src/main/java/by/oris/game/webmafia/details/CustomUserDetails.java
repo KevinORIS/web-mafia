@@ -9,21 +9,21 @@ import org.springframework.security.core.userdetails.UserDetails;
 public class CustomUserDetails implements UserDetails {
 
     private String email;
-    private String name;
+    private String username;
     private Collection<? extends GrantedAuthority> authorities;
     private String password;
 
-    public CustomUserDetails(String email, String name, Collection<? extends GrantedAuthority> authorities,
+    public CustomUserDetails(String email, String username, Collection<? extends GrantedAuthority> authorities,
                              String password) {
         this.email = email;
-        this.name = name;
+        this.username = username;
         this.authorities = authorities;
         this.password = password;
     }
 
     @Override
     public String getUsername() {
-        return name;
+        return username;
     }
 
     @Override

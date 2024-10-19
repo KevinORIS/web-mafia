@@ -2,22 +2,22 @@ package by.oris.game.webmafia.service.impl.outgame;
 
 import by.oris.game.webmafia.model.entities.outgame.UserRole;
 import by.oris.game.webmafia.repository.outgame.UserRoleRepository;
+import by.oris.game.webmafia.service.inter.outgame.UserRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 @Service
-public class UserRoleServiceImpl {
+public class UserRoleServiceImpl implements UserRoleService {
     @Autowired
     private UserRoleRepository userRoleRepository;
 
-    public Optional<UserRole> findById(final int id) {
-        return userRoleRepository.findById(id);
+    @Override
+    public UserRole findByName(String name) {
+        return userRoleRepository.findByName(name);
     }
 
-
+    @Override
     public UserRole save(UserRole userRole) {
-       return userRoleRepository.save(userRole);
+        return userRoleRepository.save(userRole);
     }
 }

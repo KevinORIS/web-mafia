@@ -23,12 +23,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User findByName(String name) {
-        return userRepository.findByName(name);
+    public User findByUsername(String username) {
+        return userRepository.findByUsername(username);
     }
     @Override
     public User saveDTO(UserDTO userDTO) {
-        User user = new User(userDTO.getEmail(), userDTO.getName(), userDTO.getPassword());
+        User user = new User(userDTO.getEmail(), userDTO.getUsername(), userDTO.getPassword());
         return user;
     }
 }

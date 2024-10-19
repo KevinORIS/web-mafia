@@ -64,42 +64,42 @@ public class AddAllEntitiesToDB {
 //        userRoleService.update(userRole);
 
         User user1 = new User();
-        user1.setName("Bob");
+        user1.setUsername("Bob");
         user1.setEmail("bob@gmail.com");
         user1.setPassword("asdvxcvhn23");
         user1.setProfilePictureURL("/bobik");
         user1.setUserRole(userRole);
 
         User user2 = new User();
-        user2.setName("Jack");
+        user2.setUsername("Jack");
         user2.setEmail("jack@gmail.com");
         user2.setPassword("123");
         user2.setProfilePictureURL("/jack");
         user2.setUserRole(userRole);
 
         User user3 = new User();
-        user3.setName("Kevin");
+        user3.setUsername("Kevin");
         user3.setEmail("kevin@gmail.com");
         user3.setPassword("441");
         user3.setProfilePictureURL("/kevin");
         user3.setUserRole(userRole);
 
         User user4 = new User();
-        user4.setName("Lupik");
+        user4.setUsername("Lupik");
         user4.setEmail("lupik@gmail.com");
         user4.setPassword("gcv123");
         user4.setProfilePictureURL("/lupik");
         user4.setUserRole(userRole);
 
         User user5 = new User();
-        user5.setName("John");
+        user5.setUsername("John");
         user5.setEmail("john@gmail.com");
         user5.setPassword("vvcsa");
         user5.setProfilePictureURL("/jjj");
         user5.setUserRole(userRole);
 
         User user6 = new User();
-        user6.setName("LosPol");
+        user6.setUsername("LosPol");
         user6.setEmail("los@gmail.com");
         user6.setPassword("pol");
         user6.setProfilePictureURL("/pol");

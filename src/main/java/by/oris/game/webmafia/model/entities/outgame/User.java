@@ -21,7 +21,7 @@ public class User {
     @Column(name = "user_id", unique = true, nullable = false)
     private int id;
     private String email;
-    private String name;
+    private String username;
     private String password;
     @Column(name = "profile_picture_url")
     private String profilePictureURL;
@@ -39,10 +39,10 @@ public class User {
     private Timestamp createdTs;
     private Timestamp updatedTs;
 
-    public User(String email, String name, String password) {
+    public User(String email, String username, String password) {
         super();
         this.email = email;
-        this.name = name;
+        this.username = username;
         this.password = password;
     }
 }

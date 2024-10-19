@@ -12,5 +12,5 @@ public interface UserService {
 
     User saveDTO(UserDTO userDTO);
 
-    User findByName(String name);
+    User findByUsername(String username);
 }
