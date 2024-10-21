@@ -13,4 +13,6 @@ public interface UserService {
     User saveDTO(UserDTO userDTO);
 
     User findByUsername(String username);
+
+    User createNew(String username, String email, String password);
 }

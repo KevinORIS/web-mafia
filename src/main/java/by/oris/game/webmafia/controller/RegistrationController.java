@@ -3,8 +3,6 @@ package by.oris.game.webmafia.controller;
 import by.oris.game.webmafia.dto.UserDTO;
 import by.oris.game.webmafia.model.entities.outgame.Stat;
 import by.oris.game.webmafia.model.entities.outgame.User;
-import by.oris.game.webmafia.service.inter.outgame.StatService;
-import by.oris.game.webmafia.service.inter.outgame.UserRoleService;
 import by.oris.game.webmafia.service.inter.outgame.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,10 +16,6 @@ public class RegistrationController {
 
     @Autowired
     private UserService userService;
-    @Autowired
-    private StatService statService;
-    @Autowired
-    private UserRoleService userRoleService;
 
 
     @GetMapping("/register")
@@ -38,14 +32,7 @@ public class RegistrationController {
             return "register";
         }
 
-        user = new User();
-        user.setUsername(userDTO.getUsername());
-        user.setEmail(userDTO.getEmail());
-        user.setPassword(passwordEncoder().encode(userDTO.getPassword()));
-        user.setUserRole(userRoleService.findByName("user"));
-        user.setStat(statService.save(new Stat()));
-
-        userService.save(user);
+        userService.createNew(userDTO.getUsername(), userDTO.getEmail(), userDTO.getPassword());
 
         if(userService.findByUsername(userDTO.getUsername()) != null){
             return "redirect:/login?success";
