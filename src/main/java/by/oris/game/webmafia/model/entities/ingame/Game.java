@@ -14,6 +14,7 @@ public class Game {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "game_id",unique = true, nullable = false)
     private int id;
+    private String name;
     private String code;
     private String status;
     private String result;

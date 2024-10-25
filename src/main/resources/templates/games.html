@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Games</title>
+</head>
+<body>
+    <h1>Games:</h1>
+    <div th:if="${!#lists.isEmpty(games)}">
+        <ul>
+            <li th:each="game : ${games}">
+                <a th:href="@{'/games/' + ${game.code}}" th:text="${game.name}">Game</a>
+            </li>
+        </ul>
+    </div>
+    <div th:if="${#lists.isEmpty(games)}">
+        No active games right now.
+    </div>
+</body>
+</html>
